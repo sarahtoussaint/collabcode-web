@@ -1,46 +1,28 @@
 import React, { useState } from 'react';
-import '../Cards.css'; // reuse existing styles
+import '../Cards.css'; // Make sure this CSS file has modal styles
 import CardItem from '../CardItem';
 
 function AboutFeatures() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedVideo, setSelectedVideo] = useState('');
 
-  const openModal = (videoUrl) => {
-    setSelectedVideo(videoUrl);
+  const openModal = () => {
     setModalOpen(true);
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    setSelectedVideo('');
   };
 
-  // ✨ Modal component inside AboutFeatures
-  const Modal = ({ videoSrc, isOpen, onClose }) => {
+  const Modal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
-
-    const isYouTubeLink = videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be');
 
     return (
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          {isYouTubeLink ? (
-            <iframe
-              width="800"
-              height="450"
-              src={videoSrc.replace('watch?v=', 'embed/')} // embed YouTube videos properly
-              title="YouTube Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          ) : (
-            <video width="800" height="450" controls autoPlay>
-              <source src={videoSrc} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          )}
+          <video width="800" height="450" controls autoPlay>
+            <source src="/assets/test.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <button className="close-btn" onClick={onClose}>✖</button>
         </div>
       </div>
@@ -54,29 +36,28 @@ function AboutFeatures() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="/images/chat-feature.jpg"
+              emoji="💬"
               text="Instant messaging directly in your workspace."
               label="Real-Time Chat"
-              onClick={() => openModal('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}
+              onClick={openModal}
             />
             <CardItem
-              src="/images/collab-feature.jpg"
+              emoji="🤝"
               text="Code together with live editing and shared cursors."
               label="Live Collaboration"
-              onClick={() => openModal('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}
+              onClick={openModal}
             />
             <CardItem
-              src="/images/team-feature.jpg"
+              emoji="📝"
               text="Manage your teams effortlessly with organized spaces."
               label="Team Spaces"
-              onClick={() => openModal('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}
+              onClick={openModal}
             />
           </ul>
         </div>
       </div>
 
-      {/* Render Modal at the bottom */}
-      <Modal videoSrc={selectedVideo} isOpen={modalOpen} onClose={closeModal} />
+      <Modal isOpen={modalOpen} onClose={closeModal} />
     </div>
   );
 }

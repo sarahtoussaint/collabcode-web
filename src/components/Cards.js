@@ -10,13 +10,13 @@ function Cards() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="/assets/features.png"
+              emoji="👩🏾‍💻👨🏻‍💻"
               text="See what CollabCode has to offer."
               label="About Us"
               path="/about"
             />
             <CardItem
-              src="/images/team.jpg"
+              emoji="👋"
               text="Meet the team behind CollabCode."
               label="Our Team"
               path="/team"
