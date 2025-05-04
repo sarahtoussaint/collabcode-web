@@ -12,8 +12,15 @@ function Navbar() {
         </Link>
       </div>
       <div className="navbar-right">
-        <Link to="/signup" className="signup-link">Sign Up Now</Link>
-      </div>
+        <a
+          href="https://github.com/sarahtoussaint/collab-ext"
+          className="signup-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Use Now
+      </a>
+  </div>
     </nav>
   );
 }
