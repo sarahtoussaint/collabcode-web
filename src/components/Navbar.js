@@ -18,7 +18,7 @@ function Navbar() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Use Now
+          Use Now!
       </a>
   </div>
     </nav>

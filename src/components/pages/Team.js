@@ -7,19 +7,19 @@ function Team() {
     {
       name: 'Sarah Toussaint',
       role: 'Sophomore, Computer Science and Business',
-      image: '/assets/sarah.jpg', 
+      image: '/assets/sarah3.png', 
     },
-    /*{
-      name: 'Lily',
-      role: 'add',
-      image: '/images/lily.jpg',
+    { 
+      name: 'Lorrie',
+      role: 'Junior, Computer Science, Minor in Data Science',
+      image: '/assets/lorrie3.png',
     },
     {
-      name: 'Lorrie',
-      role: 'add',
-      image: '/images/lorrie.jpg',
+      name: 'Lily',
+      role: 'Junior, Computer Science, Minoring in Math and Game Design',
+      image: '/assets/lily.png',
     },
-    */
+    
   ];
 
   return (
