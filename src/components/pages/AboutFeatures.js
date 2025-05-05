@@ -20,7 +20,7 @@ function AboutFeatures() {
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <video width="800" height="450" controls autoPlay>
-            <source src="/assets/test.mp4" type="video/mp4" />
+            <source src="/assets/working Collab.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <button className="close-btn" onClick={onClose}>✖</button>
