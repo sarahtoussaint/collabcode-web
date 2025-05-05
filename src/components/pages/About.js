@@ -14,7 +14,7 @@ function About() {
         Whether you're brainstorming ideas, coding side-by-side, or building the next big thing — CollabCode is designed to make teamwork feel natural, not forced. We aimed to create our own way to work on code with peers so users can easily connect to the same server and start editing a file together.
         </p>
         <p>
-        Below we have descriptions of three of our key features used to enhance your coding experience. fdfd
+        Below we have descriptions of three of our key features used to enhance your coding experience.
         </p>
       </div>
 

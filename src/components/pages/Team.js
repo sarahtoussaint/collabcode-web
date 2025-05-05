@@ -16,7 +16,7 @@ function Team() {
     },
     {
       name: 'Lily',
-      role: 'Junior, Computer Science, Minoring in Math and Game Design',
+      role: 'Junior, Computer Science, Minor in Math and Game Design',
       image: '/assets/lily.png',
     },
     
